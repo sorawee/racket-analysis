@@ -92,6 +92,15 @@
   (define analyzers
     (list
      (create-analyzer
+      #:level warning #:name case:quote
+      (define case-ids (filter (λ (id) (free-identifier=? id #'case)) ids))
+      (syntax-parser
+        [(-case _ _ ... [({~datum quote} _) _ ...+] _ ...)
+         #:when (member-by-position #'-case case-ids)
+         (list this-syntax)]
+        [_ '()]))
+
+     (create-analyzer
       #:level error #:name cond:invalid-else
       (define cond-ids (filter (λ (id) (free-identifier=? id #'cond)) ids))
       (define else-ids (filter (λ (id) (free-identifier=? id #'else)) ids))
