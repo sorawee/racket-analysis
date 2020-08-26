@@ -1,0 +1,109 @@
+----------------------
+[Wednesday, August 26th, 2020 3:30:35am] Processing /Users/sorawee/git/racket-repos/July2020entries/scripts/defines.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket-repos/July2020entries/scripts/defines.rkt:29:4 (syntax-case mod () ((_ name lang (_ top-levels ...)) (syntax-e (syntax (top-levels ...)))) (else #f))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket-repos/July2020entries/scripts/defines.rkt:37:6 (match (syntax->datum s) ((quasiquote (define (unquote head) unquote rst)) (list head (syntax-line s))) (else #f))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:30:43am] Processing /Users/sorawee/git/racket-repos/drracket/drracket/browser/external.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket-repos/drracket/drracket/browser/external.rkt:35:4 (match x (#f #t) ((quasiquote ("http" (unquote (? string?)) (unquote (? integer?)))) #t) (else #f))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:30:50am] Processing /Users/sorawee/git/racket-repos/drracket/drracket/drracket/private/frame.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket-repos/drracket/drracket/drracket/private/frame.rkt:403:4 (match p ((quasiquote (planet (unquote (? string?)) ((unquote (? string?)) (unquote (? string?)) (unquote (? number?))))) #t) ((quasiquote (planet (unquote (? string?)) ((unquote (? string?)) (unquote (? string?)) (unquote (? number?)) (unquote (? numbe...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:31:07am] Processing /Users/sorawee/git/racket-repos/drracket/drracket/drracket/private/pict-snip.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket-repos/drracket/drracket/drracket/private/pict-snip.rkt:118:4 (match sexp ((quasiquote ((unquote (? real? w)) (unquote (? real? h)) (unquote (? real? d)) (unquote (? real? a)) (unquote recorded-datum))) (new pict-snip% (w w) (h h) (d d) (a a) (recorded-datum recorded-datum))) (else #f))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:31:11am] Processing /Users/sorawee/git/racket-repos/drracket/drracket/drracket/private/tool-contract-language.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket-repos/drracket/drracket/drracket/private/tool-contract-language.rkt:15:6 (syntax-case case-stx (define) ((define name expr) (identifier? (syntax name)) (make-def-binding (syntax name) (syntax expr))) ((name type type-names strs ...) (and (identifier? (syntax name)) (not (string? (syntax-object->datum (syntax type)))) (andmap...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:31:30am] Processing /Users/sorawee/git/racket-repos/drracket/drracket/help/private/save-bug-report.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket-repos/drracket/drracket/help/private/save-bug-report.rkt:73:2 (match a-saved-report ((struct saved-report ((? number?) (list (list (? symbol? keys) vals) ...))) (and (equal? (sort keys symbol<?) valid-keys) (for/and ((key (in-list keys)) (val (in-list vals))) (case key ((class) (member val (map car bug-classes))) ...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:31:58am] Processing /Users/sorawee/git/racket-repos/drracket/drracket-tool-lib/drracket/private/standalone-module-browser.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket-repos/drracket/drracket-tool-lib/drracket/private/standalone-module-browser.rkt:259:4 (syntax-case stx () ((module m-name rest ...) (and (eq? (syntax-e (syntax module)) (quote module)) (identifier? (syntax m-name))) (format "~a" (syntax->datum (syntax m-name)))) (else unknown-module-name))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket-repos/drracket/drracket-tool-lib/drracket/private/standalone-module-browser.rkt:278:6 (match base/submod ((quasiquote (submod (unquote p) (unquote _) ...)) p) (else base/submod))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket-repos/drracket/drracket-tool-lib/drracket/private/standalone-module-browser.rkt:696:10 (match name ((? path-string?) (and (file-exists? name) name)) ((quasiquote (submod (unquote p) (unquote _) ...)) (and (file-exists? p) p)) (else #f))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:33:27am] Processing /Users/sorawee/git/racket-repos/racket-analysis/test.rkt
+(issue
+ 'error
+ 'cond:invalid-else
+ #<syntax:/Users/sorawee/git/racket-repos/racket-analysis/test.rkt:7:2 (cond (else 2))>)
+(issue
+ 'error
+ 'cond:invalid-else
+ #<syntax:/Users/sorawee/git/racket-repos/racket-analysis/test.rkt:16:8 (cond (else 3))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket-repos/racket-analysis/test.rkt:15:0 (match #f (else (cond (else 3))))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:33:29am] Processing /Users/sorawee/git/racket-repos/racket-lang-org/blog/_src/xml-from-blogger/xml.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket-repos/racket-lang-org/blog/_src/xml-from-blogger/xml.rkt:41:5 (match x ((quasiquote (a ((href (unquote url))) (unquote text))) (format "[~a](~a)" text url)) ((quote (br)) "\n") ((quote nbsp) "") ((list* (quote tt) xexprs) (string-append* (append (list "`") (map x->md xexprs) (list "`")))) ((list* (quote li) stuff)...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:33:56am] Processing /Users/sorawee/git/racket-repos/scribble/scribble-lib/scribble/private/lp.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket-repos/scribble/scribble-lib/scribble/private/lp.rkt:36:31 (syntax-case expr (require) ((require mod (... ...)) (let loop ((mods (syntax->list (syntax (mod (... ...)))))) (cond ((null? mods) null) (else (syntax-case (car mods) (for-syntax) ((for-syntax x (... ...)) (append (loop (syntax->list (syntax (x (... .....>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:33:59am] Processing /Users/sorawee/git/racket-repos/scribble/scribble-lib/scribble/srcdoc.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket-repos/scribble/scribble-lib/scribble/srcdoc.rkt:79:31 (syntax-case r () ((op arg ...) (with-syntax (((arg ...) (map shift-and-introduce (syntax->list (syntax (arg ...)))))) (syntax (op arg ...)))) (else (shift-and-introduce r)))>)
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket-repos/scribble/scribble-lib/scribble/srcdoc.rkt:214:14 (syntax-case snd () ((id (id2 ...) ctc) (cons (syntax (kwd id ctc)) (loop (cddr stx-lst)))) ((id ctc) (cons (syntax (kwd id ctc)) (loop (cddr stx-lst)))) (else (raise-syntax-error (quote proc-doc) "unknown argument spec in ->i" snd)))>)
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket-repos/scribble/scribble-lib/scribble/srcdoc.rkt:207:9 (syntax-case fst () (kwd (and arg? (keyword? (syntax-e (syntax kwd)))) (let () (when (null? (cdr stx-lst)) (raise-syntax-error (quote proc-doc) "expected something to follow keyword" stx-lst)) (define snd (cadr stx-lst)) (syntax-case snd () ((id (id2 .....>)
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket-repos/scribble/scribble-lib/scribble/srcdoc.rkt:346:22 (syntax-case (syntax (contract names)) (->d -> ->* values case->) (((-> ctcs ... result) (arg-names ...)) (begin (unless (= (length (syntax->list (syntax (ctcs ...)))) (length (syntax->list (syntax (arg-names ...))))) (raise-syntax-error #f "mismatched ...>)
+

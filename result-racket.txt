@@ -1,0 +1,534 @@
+
+----------------------
+[Wednesday, August 26th, 2020 2:55:21am] Processing /Users/sorawee/git/racket/pkgs/racket-benchmarks/tests/racket/benchmarks/shootout/pidigits-gmp.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/pkgs/racket-benchmarks/tests/racket/benchmarks/shootout/pidigits-gmp.rkt:43:13 (syntax-case (car xs) (unquote) ((unquote x) (syntax x)) (else #f))>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:57:00am] Processing /Users/sorawee/git/racket/racket/collects/ffi/unsafe.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/collects/ffi/unsafe.rkt:1906:21 (syntax-case more () (() (values alignment malloc-mode (reverse properties) (reverse property-bindings) no-equal? define-unsafe?)) ((#:alignment) (err "missing expression for #:alignment" (head))) ((#:alignment a . rest) (not alignment) (loop (syntax re...>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:57:13am] Processing /Users/sorawee/git/racket/racket/collects/racket/cmdline.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/collects/racket/cmdline.rkt:107:65 (syntax-case (car sublines) () (((flag ...) . rest) (let ((flags (syntax->list (syntax (flag ...))))) (unless (andmap (lambda (x) (string? (syntax-e x))) flags) (serror "flag specification is not a string or sequence of strings" (syntax-case (car sublin...>)
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/collects/racket/cmdline.rkt:166:40 (syntax-case f () (() null) ((arg . rest) (identifier? (syntax arg)) (cons (syntax arg) (loop (syntax rest)))) (((arg def) . rest) (identifier? (syntax arg)) (cons (syntax (arg def)) (loop (syntax rest)))) (arg (identifier? (syntax arg)) (list (syntax a...>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:57:18am] Processing /Users/sorawee/git/racket/racket/collects/racket/private/check.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/collects/racket/private/check.rkt:72:4 (syntax-case stx () ((who . _) (raise-syntax-error #f "cannot apply" (syntax who) stx)) (else (quasisyntax (quote (unsyntax id)))))>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:57:29am] Processing /Users/sorawee/git/racket/racket/collects/syntax/path-spec.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/collects/syntax/path-spec.rkt:8:11 (syntax-case fn (lib file) (_ (string? (syntax-e fn)) (let ((s (syntax-e fn))) (unless (module-path? s) (raise-syntax-error #f "bad relative pathname string" stx fn)) (apply build-path (regexp-split #rx"/" s)))) ((file . _) (let ((l (syntax->datum fn)))...>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:57:37am] Processing /Users/sorawee/git/racket/racket/share/pkgs/aws/aws/tests/data.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/aws/aws/tests/data.rkt:39:6 (match x ((pregexp "^\\s*([^#]+?)\\s*=\\s*([^#]+?)$" (list _ k v)) (values k v)) (else (values 0 0)))>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:57:38am] Processing /Users/sorawee/git/racket/racket/share/pkgs/class-iop-lib/racket/class/private/class-iop-ct.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/class-iop-lib/racket/class/private/class-iop-ct.rkt:44:15 (syntax-case stx (set!) ((set! var expr) (quasisyntax (let ((newval expr)) (unless (is-a? newval (unsyntax (static-interface-dynamic (raw-checked-binding-iface self)))) (error (quote check) "interface check failed on: ~e" newval)) (set! (unsyntax (raw-c...>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:57:41am] Processing /Users/sorawee/git/racket/racket/share/pkgs/compatibility-lib/mzlib/cmdline.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/compatibility-lib/mzlib/cmdline.rkt:62:49 (syntax-case (car sublines) () (((flag ...) . rest) (begin (unless (andmap (lambda (x) (string? (syntax-e x))) (syntax->list (syntax (flag ...)))) (serror "flag specification is not a string or sequence of strings" (syntax (flag ...)))) (syntax (flag .....>)
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/compatibility-lib/mzlib/cmdline.rkt:126:36 (syntax-case f () (() null) ((arg . rest) (identifier? (syntax arg)) (cons (syntax arg) (loop (syntax rest)))) (arg (identifier? (syntax arg)) (list (syntax arg))) (else (serror "bad argument list" line)))>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:57:42am] Processing /Users/sorawee/git/racket/racket/share/pkgs/compatibility-lib/mzlib/private/stxparamkey.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/compatibility-lib/mzlib/private/stxparamkey.rkt:47:6 (syntax-case stx () ((set! id _) (module-identifier=? (syntax set!) set!-stx) (raise-syntax-error #f "cannot mutate syntax identifier" stx (syntax id))) (else (v stx)))>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:57:42am] Processing /Users/sorawee/git/racket/racket/share/pkgs/compatibility-lib/mzlib/private/stxset.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/compatibility-lib/mzlib/private/stxset.rkt:34:36 (syntax-case defn (define-values define-syntaxes begin) ((define-values (id ...) expr) (andmap identifier? (syntax->list (syntax (id ...)))) (list defn)) ((define-values . _) (raise-syntax-error #f "bad definition" stx defn)) ((define-syntaxes (id ...) ...>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:57:43am] Processing /Users/sorawee/git/racket/racket/share/pkgs/compatibility-lib/mzlib/serialize.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/compatibility-lib/mzlib/serialize.rkt:209:8 (syntax-case id/sup-stx () (id (identifier? (syntax id)) (values (syntax id) #f)) ((id sup-id) (and (identifier? (syntax id)) (identifier? (syntax sup-id))) (values (syntax id) (syntax sup-id))) ((id other) (identifier? (syntax id)) (raise-syntax-error ...>)
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/compatibility-lib/mzlib/serialize.rkt:262:25 (syntax-case fields-stx () ((field ...) (let ((field-ids (syntax->list (syntax (field ...))))) (for-each (lambda (id) (unless (identifier? id) (raise-syntax-error #f "expected a field identifier" stx id))) field-ids) field-ids)) (else (raise-syntax-erro...>)
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/compatibility-lib/mzlib/serialize.rkt:302:23 (syntax-case other-stx () ((version-num maker-expr cycle-maker-expr) (let ((v (syntax-e (syntax version-num)))) (unless (ok-version? v) (raise-syntax-error #f (string-append expected-version " for other-version deserializer") stx (syntax version-num))) ...>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:58:10am] Processing /Users/sorawee/git/racket/racket/share/pkgs/db-lib/db/private/cassandra/message.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/db-lib/db/private/cassandra/message.rkt:457:6 (match type ((quote ascii) (bytes->string/latin-1 bs)) ((or (quote bigint) (quote int)) (integer-bytes->integer bs #t #t)) ((quote blob) bs) ((quote boolean) (not (equal? bs #"\0"))) ((quote decimal) (define nexp (integer-bytes->integer bs #t #t 0 4)) (...>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/db-lib/db/private/cassandra/message.rkt:542:4 (match type ((quote ascii) (unless (and (string? v) (regexp-match #px"^[[:ascii:]]*$" v)) (err)) (string->bytes/latin-1 v)) ((quote bigint) (unless (int64? v) (err)) (integer->integer-bytes v 8 #t #t)) ((quote int) (unless (int32? v) (err)) (integer->in...>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:58:19am] Processing /Users/sorawee/git/racket/racket/share/pkgs/deinprogramm/deinprogramm/DMdA/private/DMdA-langs.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/deinprogramm/deinprogramm/DMdA/private/DMdA-langs.rkt:889:17 (match obj ((quasiquote (lib (unquote (? string? s1)) (unquote (? string? s2)) ...)) (quasiquote (lib (unquote (apply string-append (add-between (append s2 (list s1)) "/")))))) (else obj))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/deinprogramm/deinprogramm/DMdA/private/DMdA-langs.rkt:900:17 (match obj ((quasiquote (lib (unquote (? (and/c string? has-slashes?) s)))) (define split (regexp-split #rx"/" s)) (quasiquote (lib (unquote (last split)) (unquote-splicing (reverse (cdr (reverse split))))))) (else obj))>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:58:20am] Processing /Users/sorawee/git/racket/racket/share/pkgs/deinprogramm/deinprogramm/DMdA/private/primitives.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/deinprogramm/deinprogramm/DMdA/private/primitives.rkt:395:8 (syntax-case stx () ((self . args) (syntax/loc stx (real-make-pair . args))) (else (syntax/loc stx real-make-pair)))>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:58:29am] Processing /Users/sorawee/git/racket/racket/share/pkgs/deinprogramm/deinprogramm/sdp/private/sdp-langs.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/deinprogramm/deinprogramm/sdp/private/sdp-langs.rkt:919:17 (match obj ((quasiquote (lib (unquote (? string? s1)) (unquote (? string? s2)) ...)) (quasiquote (lib (unquote (apply string-append (add-between (append s2 (list s1)) "/")))))) (else obj))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/deinprogramm/deinprogramm/sdp/private/sdp-langs.rkt:930:17 (match obj ((quasiquote (lib (unquote (? (and/c string? has-slashes?) s)))) (define split (regexp-split #rx"/" s)) (quasiquote (lib (unquote (last split)) (unquote-splicing (reverse (cdr (reverse split))))))) (else obj))>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:58:30am] Processing /Users/sorawee/git/racket/racket/share/pkgs/deinprogramm/deinprogramm/sdp/record.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/deinprogramm/deinprogramm/sdp/record.rkt:177:43 (syntax-case stx () ((self . args) (syntax/loc stx (real-constructor . args))) (else (syntax/loc stx real-constructor)))>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:58:32am] Processing /Users/sorawee/git/racket/racket/share/pkgs/deinprogramm/deinprogramm/signature/module-begin.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/deinprogramm/deinprogramm/signature/module-begin.rkt:100:12 (syntax-case expanded (begin define-values) ((define-values (?id ...) ?e1) (with-syntax (((?enforced ...) (map (lambda (id) (cond ((free-id-table-ref signature-table id #f) => (lambda (sig) (free-id-table-remove! signature-table id) (with-syntax ((?id i...>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:58:39am] Processing /Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed/examples/logging/bank.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed/examples/logging/bank.rkt:10:5 (match (hash-has-key? accounts who) (#t (quote (already-exists))) (else (hash-set! accounts who 0) (log-to-parent #:severity (quote debug) (format "Logging new account for ~a" who)) (list (quote created) who)))>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:58:39am] Processing /Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed/examples/multiple/bank.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed/examples/multiple/bank.rkt:10:5 (match (hash-has-key? accounts who) (#t (quote (already-exists))) (else (hash-set! accounts who 0) (list (quote created) who)))>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:58:40am] Processing /Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed/examples/named/bank.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed/examples/named/bank.rkt:8:5 (match (hash-has-key? accounts who) (#t (quote (already-exists))) (else (hash-set! accounts who 0) (list (quote created) who)))>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:58:40am] Processing /Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed/examples/thread/master.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed/examples/thread/master.rkt:15:5 (match (hash-has-key? accounts who) (#t (quote (already-exists))) (else (hash-set! accounts who 0) (list (quote created) who)))>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:58:41am] Processing /Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed/map-reduce.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed/map-reduce.rkt:52:2 (match x ((list (quote file) fn) (list (quote file) (bytes->string/locale fn))) ((cons h t) (cons (->module-path h) (->module-path t))) ((? bytes?) (bytes->path x)) (else x))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed/map-reduce.rkt:153:22 (match e ((list (quote reduce-ready)) (loop ts idle-mappers (remove m mapping) (cons m ready-to-reduce) (remove m reducing))) ((list (quote reduce-done)) (loop ts (cons m idle-mappers) mapping ready-to-reduce (remove m reducing))) (else (raise (format "...>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed/map-reduce.rkt:138:6 (match (list ts idle-mappers mapping ready-to-reduce reducing) ((list (cons tsh tst) (cons imh imt) mapping rtr r) (*channel-put (second imh) (list (quote map) mapper sorter (list tsh))) (loop tst imt (cons imh mapping) rtr r)) ((list ts im m (cons rtr1...>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:58:43am] Processing /Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed.rkt:377:14 (match e ((dcgm (== DCGM-TYPE-LOG-TO-PARENT) _ _ (list severity msg)) (send node log-from-child #:severity severity msg)) ((dcgm (== DCGM-NEW-PLACE-CHANNEL) _ _ _) (send node forward-mesg e pch)) ((dcgm (== DCGM-CONTROL-NEW-CONNECTION) dest -1 (list nam...>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed.rkt:512:16 (match place-exec ((list _ _ _ name) (add-named-place name np)) (else (add-sub-ec np)))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed.rkt:473:11 (match place-exec ((list (quote connect) name) (define np (named-place-lookup name)) (cond (np (define nc (new connection% (name-pl np) (ch-id ch-id) (sc src-channel) (node this))) (add-sub-ec nc)) (else (sconn-write-flush src-channel (dcgm DCGM-TYPE-IN...>)
+(issue
+ 'error
+ 'cond:invalid-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed.rkt:528:16 (cond ((place-channel? pch) (place-channel-put pch msg)) ((is-a? pch connection%) (send pch forward msg)) ((th-place-channel? pch) (th-place-channel-put pch msg)) (else (raise (format "Unexpected channel type2 ~a" pch))))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed.rkt:525:12 (match pch (#f (raise (format "Unknown channel ch-id ~a in message ~a" ch-id m))) (else (cond ((place-channel? pch) (place-channel-put pch msg)) ((is-a? pch connection%) (send pch forward msg)) ((th-place-channel? pch) (th-place-channel-put pch msg)) (e...>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed.rkt:770:8 (match (assoc id subchannels) ((cons _id _pch) _pch) (else #f))>)
+(issue
+ 'error
+ 'cond:invalid-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed.rkt:897:16 (cond ((place-channel? pch) (place-channel-put pch msg)) ((is-a? pch connection%) (send pch forward msg)) ((th-place-channel? pch) (th-place-channel-put pch msg)) ((async-bi-channel? pch) (async-bi-channel-put pch msg)) (else (raise (format "Unexpected ...>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed.rkt:894:12 (match pch (#f (raise (format "Unknown channel ch-id ~a in message ~a" ch-id it))) (else (cond ((place-channel? pch) (place-channel-put pch msg)) ((is-a? pch connection%) (send pch forward msg)) ((th-place-channel? pch) (th-place-channel-put pch msg)) (...>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/distributed-places-lib/racket/place/distributed.rkt:884:8 (match it ((dcgm 7 -1 -1 ch-id) (klogger (format "SPAWNED-PROCESS:~a PLACE DIED ~a:~a:~a" (get-sp-pid) host-name listen-port ch-id)) (cond ((find-place-by-sc-id ch-id) => (lambda (rp) (send rp place-died))) (else (raise (format "remote-place for sc-id ~...>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:59:27am] Processing /Users/sorawee/git/racket/racket/share/pkgs/frtime/frlibs/etc.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/frtime/frlibs/etc.rkt:135:26 (syntax-case args () (id (identifier? (syntax id)) (with-syntax (((pre-arg ...) pre-args)) (syntax (((pre-arg ... . id) body1 body ...))))) (() (with-syntax (((pre-arg ...) pre-args)) (syntax (((pre-arg ...) body1 body ...))))) ((id . rest) (identifier?...>)
+
+----------------------
+[Wednesday, August 26th, 2020 2:59:32am] Processing /Users/sorawee/git/racket/racket/share/pkgs/frtime/opt/frtime-opt.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/frtime/opt/frtime-opt.rkt:142:7 (syntax-case expanded-form (begin begin0 #%provide #%require #%declare define-syntaxes define-values-for-syntax define-values #%app) ((begin MORE-FORMS ...) (quasisyntax (optimize-module EQUIV-MAP MORE-FORMS ... FORMS ...))) ((#%require . __) (quasisynt...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:00:19am] Processing /Users/sorawee/git/racket/racket/share/pkgs/htdp-lib/2htdp/itunes.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/htdp-lib/2htdp/itunes.rkt:360:6 (match (xml->xexpr (cleanup (document-element itunes:xml))) ((quasiquote (plist ((version (unquote n))) (dict (unquote _attributes) (unquote body) ...))) body) (else (check-arg tag #f "XML file exported from iTunes (1)" "first" file)))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/htdp-lib/2htdp/itunes.rkt:364:6 (match (dict-attribute plist:xexpr "Tracks") ((quasiquote (dict (unquote _attributes) (unquote d) ...)) d) (else (check-arg tag #f "XML file exported from iTunes (2)" "first" file)))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/htdp-lib/2htdp/itunes.rkt:422:2 (match a ((quasiquote (string (unquote _attributes) (unquote s) ...)) (foldr ~a "" s)) ((quasiquote (integer (unquote _attributes) (unquote i))) (string->number i)) ((quasiquote (real (unquote _attributes) (unquote i))) (string->number i)) ((quasiquote ...>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/htdp-lib/2htdp/itunes.rkt:454:2 (match x ((quasiquote (key (unquote _attributes) (unquote (? string? s)))) s) (else (error (quote key->value) "unknown kind of dict-key: ~e" x)))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:00:51am] Processing /Users/sorawee/git/racket/racket/share/pkgs/htdp-lib/stepper/private/view-controller-typed.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/htdp-lib/stepper/private/view-controller-typed.rkt:29:2 (match history-entry ((Step _ (or (quote user-application) (quote finished-or-error)) posns) #t) (else #f))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/htdp-lib/stepper/private/view-controller-typed.rkt:35:2 (match (Step-kind history-entry) ((quote finished-or-error) #t) (else #f))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:02:24am] Processing /Users/sorawee/git/racket/racket/share/pkgs/macro-debugger/macro-debugger/view/process-deriv.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/macro-debugger/macro-debugger/view/process-deriv.rkt:14:4 (match deriv ((lift-deriv e1 e2 first lifted-stx second) (let ((first (adjust-deriv/lift first))) (and first (let ((e1 (wderiv-e1 first))) (make lift-deriv e1 e2 first lifted-stx second))))) ((ecte e1 e2 (quote ()) first second locals2) (let ((first (ad...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:02:40am] Processing /Users/sorawee/git/racket/racket/share/pkgs/math-lib/math/private/array/array-syntax.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/math-lib/math/private/array/array-syntax.rkt:27:5 (syntax-case e-stx () (#(e ...) (let ((lst (syntax->list (syntax (e ...))))) (for/fold ((acc acc)) ((lst (in-list lst))) (loop lst acc)))) (else (cons e-stx acc)))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:04:43am] Processing /Users/sorawee/git/racket/racket/share/pkgs/pict-lib/texpict/code.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/pict-lib/texpict/code.rkt:526:30 (syntax-case stx () ((_ a . b) (let ((src (syntax-source stx)) (line (syntax-line stx)) (col (syntax-column stx)) (pos (syntax-position stx)) (span (syntax-span stx)) (a-pos (syntax-position (syntax a)))) (if (and pos a-pos (> a-pos pos)) (vector src li...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:04:51am] Processing /Users/sorawee/git/racket/racket/share/pkgs/plai-lib/gc2/mutator.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/plai-lib/gc2/mutator.rkt:417:30 (syntax-case (syntax collector-module) (mutator-quote) ((mutator-quote . x) (datum->syntax (syntax collector-module) (cons (syntax quote) (syntax x)))) (else (syntax collector-module)))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:06:53am] Processing /Users/sorawee/git/racket/racket/share/pkgs/pollen/pollen/tag.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/pollen/pollen/tag.rkt:11:2 (match xs ((cons (? txexpr-attrs? leading-attrs) tail) (values leading-attrs tail)) (else (values null xs)))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:07:12am] Processing /Users/sorawee/git/racket/racket/share/pkgs/r6rs-lib/rnrs/control-6.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/r6rs-lib/rnrs/control-6.rkt:15:19 (syntax-case clause () ((formals body1 body ...) (syntax-case (syntax formals) () ((id ...) (andmap identifier? (syntax->list (syntax (id ...)))) clause) ((id ... . rest) (and (identifier? (syntax rest)) (andmap identifier? (syntax->list (syntax (id ......>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:07:14am] Processing /Users/sorawee/git/racket/racket/share/pkgs/r6rs-lib/rnrs/syntax-case-6.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/r6rs-lib/rnrs/syntax-case-6.rkt:170:22 (syntax-case clause () ((pat val) (begin ((check-pat-ellipses stx) (syntax pat)) (quasisyntax (pat val)))) ((pat fender val) (begin ((check-pat-ellipses stx) (syntax pat)) (quasisyntax (pat fender val)))) (else clause))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:07:37am] Processing /Users/sorawee/git/racket/racket/share/pkgs/racklog/unify.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/racklog/unify.rkt:144:7 (match v ((? logic-var? lv) logic-var-expr ...) ((cons cl cr) cons-expr ...) ((mcons mcl mcr) mcons-expr ...) ((box bv) box-expr ...) ((? vector? vec) vector-expr ...) ((? hash? hash) hash-expr ...) ((? compound-struct? cs) cs-expr ...) ((? atom? x) ato...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:08:27am] Processing /Users/sorawee/git/racket/racket/share/pkgs/redex-benchmark/redex/benchmark/private/logging.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/redex-benchmark/redex/benchmark/private/logging.rkt:56:19 (match data ((? gc-info? d) (handle-gc-log-evt d) (loop)) ((bmark-log-end) result) (else (handler data) (loop)))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:08:49am] Processing /Users/sorawee/git/racket/racket/share/pkgs/redex-examples/redex/examples/beginner.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/redex-examples/redex/examples/beginner.rkt:403:5 (match before ((quasiquote (define ((unquote a-name) (unquote x) ...) (unquote b))) (eq? f a-name)) ((quasiquote (define (unquote a-name) (lambda (unquote x) ...))) (eq? f a-name)) ((quasiquote (define-struct (unquote struct-name) ((unquote fields) ...)...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:09:05am] Processing /Users/sorawee/git/racket/racket/share/pkgs/redex-examples/redex/examples/letrec.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/redex-examples/redex/examples/letrec.rkt:87:4 (match body ((cons a b) (or (loop a) (loop b))) ((? symbol?) (equal? body var)) (else #f))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:09:18am] Processing /Users/sorawee/git/racket/racket/share/pkgs/redex-examples/redex/examples/racket-machine/randomized-tests.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/redex-examples/redex/examples/racket-machine/randomized-tests.rkt:122:4 (match m ((quote uninit) #f) ((quasiquote (box (unquote _))) #f) ((quote undefined) (impl-undefined-val? i)) ((quasiquote (clos (unquote _))) (impl-clos-val? i)) ((quote void) (void? i)) (else (equal? m i)))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/redex-examples/redex/examples/racket-machine/randomized-tests.rkt:154:12 (match e ((quasiquote (proc-const (unquote _) (unquote _))) #t) ((quasiquote (lam (unquote _) (unquote _) (unquote _))) #t) ((quasiquote (case-lam (unquote _) ...)) #t) (else #f))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/redex-examples/redex/examples/racket-machine/randomized-tests.rkt:198:36 (match e ((quasiquote (seq (unquote es) ...)) (append es a)) (else (cons e a)))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/redex-examples/redex/examples/racket-machine/randomized-tests.rkt:189:4 (match e ((quasiquote (branch (unquote c) (unquote t) (unquote e))) (let ((c* (recur c))) (if (value? c*) (if c* (recur t) (recur e)) (quasiquote (branch (unquote c*) (unquote (recur t)) (unquote (recur e))))))) ((quasiquote (seq (unquote es) ...)) (let...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:09:29am] Processing /Users/sorawee/git/racket/racket/share/pkgs/redex-examples/redex/examples/subject-reduction.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/redex-examples/redex/examples/subject-reduction.rkt:55:11 (match t1 ((quasiquote ((unquote td) -> (unquote tr))) (if (equal? td t2) tr (k #f))) (else (k #f)))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:09:37am] Processing /Users/sorawee/git/racket/racket/share/pkgs/redex-lib/redex/private/keyword-macros.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/redex-lib/redex/private/keyword-macros.rkt:17:4 (syntax-case rest () (() (map (λ (arg) (match (hash-ref current (car arg)) (#f (cadr arg)) (x (match (cdr (cdr arg)) ((quote ()) x) ((quasiquote (((unquote ctc) (unquote desc)))) (apply-contract ctc x desc form-name)))))) formals)) ((kw . rest) (not (ke...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:09:39am] Processing /Users/sorawee/git/racket/racket/share/pkgs/redex-lib/redex/private/red-sem-macro-helpers.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/redex-lib/redex/private/red-sem-macro-helpers.rkt:11:11 (match sexp ((quasiquote (name (unquote (and sym (? symbol?))) (unquote pat))) (loop pat (cons sym names))) ((quasiquote (in-hole* (unquote (and sym (? symbol?))) (unquote pat1) (unquote pat2))) (loop pat1 (loop pat2 (cons sym names)))) ((quasiquote (in...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:09:40am] Processing /Users/sorawee/git/racket/racket/share/pkgs/redex-lib/redex/private/trace-layout.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/redex-lib/redex/private/trace-layout.rkt:54:5 (match this-c ((quote ()) (add-child a-u-tree (u-tree l (quote (()))))) ((list (u-tree c-l c-sts)) (u-tree ut-loc (cons (cons (u-tree c-l (cons (quote ()) c-sts)) other-cs) (cdr ut-sts)))) (else (error (quote append/replace-child) "identical twins not a...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:10:14am] Processing /Users/sorawee/git/racket/racket/share/pkgs/redex-test/redex/tests/unify-tests.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/redex-test/redex/tests/unify-tests.rkt:116:2 (match p ((quasiquote (list (unquote ps) ...)) (for/and ((p ps)) (no-lvars-pat? p))) ((quasiquote (cstr ((unquote nts) ...) (unquote p))) (no-lvars-pat? p)) ((quasiquote (name (unquote id) (unquote (bound)))) #f) (else #t))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/redex-test/redex/tests/unify-tests.rkt:154:7 (match res ((lvar id2) (set-union (set p) (loop (quasiquote (name (unquote id2) (unquote (bound)))) (add1 n)))) ((quasiquote (name (unquote id2) (unquote (bound)))) (set-union (set p) (loop (quasiquote (name (unquote id2) (unquote (bound)))) (add1 n))))...>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/redex-test/redex/tests/unify-tests.rkt:151:4 (match p ((quasiquote (name (unquote id) (unquote (bound)))) (define res (hash-ref eqs (lvar id))) (match res ((lvar id2) (set-union (set p) (loop (quasiquote (name (unquote id2) (unquote (bound)))) (add1 n)))) ((quasiquote (name (unquote id2) (unquote ...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:10:27am] Processing /Users/sorawee/git/racket/racket/share/pkgs/scribble-enhanced/racket.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/scribble-enhanced/racket.rkt:327:20 (syntax-case c (code:line) ((code:line e . rest) (syntax e)) ((code:line . rest) (syntax rest)) (else c))>)
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/scribble-enhanced/racket.rkt:1066:29 (syntax-case v () ((esc e) (and (identifier? (syntax esc)) (free-identifier=? (syntax esc) uncode-id)) (syntax e)) (else (stx->loc-s-expr (syntax-e v))))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:20:56am] Processing /Users/sorawee/git/racket/racket/share/pkgs/typed-racket-test/succeed/pr10057.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/typed-racket-test/succeed/pr10057.rkt:3:5 (match (quote (a b c)) ((list sym more ...) 1) (else 1))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:24:58am] Processing /Users/sorawee/git/racket/racket/share/pkgs/web-server-lib/web-server/default-web-root/htdocs/servlets/examples/basic.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/web-server-lib/web-server/default-web-root/htdocs/servlets/examples/basic.rkt:4:2 (match (request->basic-credentials req) ((cons user pass) (quasiquote (html (head (title "Basic Auth Test")) (body (h1 "User: " (unquote (bytes->string/utf-8 user))) (h1 "Pass: " (unquote (bytes->string/utf-8 pass))))))) (else (response 401 #"Unauthoriz...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:24:59am] Processing /Users/sorawee/git/racket/racket/share/pkgs/web-server-lib/web-server/default-web-root/htdocs/servlets/examples/cookie2.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/web-server-lib/web-server/default-web-root/htdocs/servlets/examples/cookie2.rkt:24:2 (match (bindings-assq #"who" binds) ((? binding:form? b) (define new-who (bytes->string/utf-8 (binding:form-value b))) (redirect-to (url->string (request-uri req)) see-other #:headers (list (cookie->header (make-cookie "id" new-who))))) (else (redirect-...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:25:15am] Processing /Users/sorawee/git/racket/racket/share/pkgs/web-server-lib/web-server/http/status-code.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/web-server-lib/web-server/http/status-code.rkt:94:5 (match (message-for-status-code code) ((? string? s) (string->bytes/utf-8 s)) (else DEFAULT-STATUS-MESSAGE))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/web-server-lib/web-server/http/status-code.rkt:90:2 (match message ((? bytes?) message) (else (match (message-for-status-code code) ((? string? s) (string->bytes/utf-8 s)) (else DEFAULT-STATUS-MESSAGE))))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:25:23am] Processing /Users/sorawee/git/racket/racket/share/pkgs/web-server-lib/web-server/private/xexpr.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/web-server-lib/web-server/private/xexpr.rkt:82:2 (match l ((list) empty) ((list-rest (? xexpr-datum?) other-elems) (format-elements l)) ((list-rest (list-rest (? symbol?) inner-elems) other-elems) (format-elements l)) ((list-rest attrs elems) (list* (format-attributes attrs) (format-elements elems))) ...>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/web-server-lib/web-server/private/xexpr.rkt:108:2 (match l ((list) empty) ((list-rest attr attrs) (list* (format-attribute attr) (format-attributes attrs))) (else (mark-error "Not a valid attribute list (Must be list of attributes. An attribute is a list containing a symbol and a string.)" l)))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/web-server-lib/web-server/private/xexpr.rkt:119:2 (match l ((list (? symbol? attr) (? string? val)) l) ((list (? symbol? attr) val) (list attr (mark-error "Not a valid attribute value (Must be string.)" val))) ((list attr (? string? val)) (list (mark-error "Not a valid attribute name (Must be symbol.)"...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:25:33am] Processing /Users/sorawee/git/racket/racket/share/pkgs/web-server-test/tests/web-server/dispatch-test.rkt
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/web-server-test/tests/web-server/dispatch-test.rkt:97:20 (match (string->url "http://www.example.com/new") ((url/paths "new") #t) (else #f))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/web-server-test/tests/web-server/dispatch-test.rkt:104:20 (match (string->url "http://www.example.com/") ((url/paths "") #t) (else #f))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/web-server-test/tests/web-server/dispatch-test.rkt:111:20 (match (string->url "http://www.example.com") ((url/paths) #t) (else #f))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/web-server-test/tests/web-server/dispatch-test.rkt:118:16 (match (string->url "http://www.example.com/foo") ((url/paths "new") #t) (else #f))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/web-server-test/tests/web-server/dispatch-test.rkt:125:17 (match (string->url "http://www.example.com/new/50") ((url/paths "new" (integer-arg a)) a) (else #f))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/web-server-test/tests/web-server/dispatch-test.rkt:133:16 (match (string->url "http://www.example.com/new") ((url/paths "new" (integer-arg a)) a) (else #f))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/web-server-test/tests/web-server/dispatch-test.rkt:140:20 (match (test-request (string->url "http://www.example.com/new")) ((request/url (url/paths "new")) #t) (else #f))>)
+(issue
+ 'error
+ 'match:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/web-server-test/tests/web-server/dispatch-test.rkt:147:17 (match (test-request (string->url "http://www.example.com/new/50")) ((request/url (url/paths "new" (integer-arg a))) a) (else #f))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:26:19am] Processing /Users/sorawee/git/racket/racket/share/pkgs/web-server-test/tests/web-server/util.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/share/pkgs/web-server-test/tests/web-server/util.rkt:75:2 (syntax-case m-expr (module) ((_ (module m-id . rest)) (syntax (let ((ns (make-base-empty-namespace))) (parameterize ((current-namespace ns)) (namespace-require (quote racket/base)) (namespace-require (quote web-server/http)) (namespace-require (quote w...>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:26:27am] Processing /Users/sorawee/git/racket/racket/src/expander/common/inline.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/src/expander/common/inline.rkt:11:22 (syntax-case arg () ((id def-val) (syntax id)) (else arg))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:26:27am] Processing /Users/sorawee/git/racket/racket/src/expander/common/struct-star.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/src/expander/common/struct-star.rkt:38:34 (syntax-case stx () ((id arg ...) (syntax/loc stx (make-id arg ...))) (else (syntax/loc stx make-id)))>)
+
+----------------------
+[Wednesday, August 26th, 2020 3:26:34am] Processing /Users/sorawee/git/racket/racket/src/io/common/class.rkt
+(issue
+ 'error
+ 'syntax-case:bind-else
+ #<syntax:/Users/sorawee/git/racket/racket/src/io/common/class.rkt:287:35 (syntax-case stx (set!) ((set! _ rhs) (if (syntax-e (quote-syntax field-mutator-maybe-id)) (syntax/loc stx (field-mutator-maybe-id this-id rhs)) (raise-syntax-error #f "field is immutable" stx))) ((_ arg (... ...)) (syntax/loc stx ((field-accessor-id th...>)
+
