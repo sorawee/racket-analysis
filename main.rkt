@@ -134,20 +134,16 @@
         [_ '()]))
 
      (create-analyzer
-      #:level error #:name match:bind-else
-      (define match-ids (filter (λ (id) (free-identifier=? id #'match)) ids))
+      #:level error #:name match-like:bind-else
+      (define match-like-ids
+        (filter (λ (id) (or (free-identifier=? id #'match)
+                            (free-identifier=? id #'syntax-case)
+                            (free-identifier=? id #'syntax-parse)
+                            (free-identifier=? id #'syntax-parser)
+                            (free-identifier=? id #'define-syntax-parser))) ids))
       (syntax-parser
-        [(-match _ ... [{~datum else} _ ...+])
-         #:when (member-by-position #'-match match-ids)
-         (list this-syntax)]
-        [_ '()]))
-
-     (create-analyzer
-      #:level error #:name syntax-case:bind-else
-      (define syntax-case-ids (filter (λ (id) (free-identifier=? id #'syntax-case)) ids))
-      (syntax-parser
-        [(-syntax-case _ ... [{~datum else} _ ...+])
-         #:when (member-by-position #'-syntax-case syntax-case-ids)
+        [(-match-like _ ... [{~datum else} _ ...+])
+         #:when (member-by-position #'-match-like match-like-ids)
          (list this-syntax)]
         [_ '()]))))
 
