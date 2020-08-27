@@ -92,6 +92,15 @@
   (define analyzers
     (list
      (create-analyzer
+      #:level warning #:name match:bind-empty-list
+      (define match-ids (filter (λ (id) (free-identifier=? id #'match)) ids))
+      (syntax-parser
+        [(-match _ _ ... [{~or {~datum null} {~datum empty}} _ ...+] _ ...)
+         #:when (member-by-position #'-match match-ids)
+         (list this-syntax)]
+        [_ '()]))
+
+     (create-analyzer
       #:level warning #:name case:quote
       (define case-ids (filter (λ (id) (free-identifier=? id #'case)) ids))
       (syntax-parser
@@ -123,7 +132,7 @@
         [_ '()]))
 
      (create-analyzer
-      #:level warning #:name cond:no-else
+      #:level annoying #:name cond:no-else
       (define cond-ids (filter (λ (id) (free-identifier=? id #'cond)) ids))
       (define else-ids (filter (λ (id) (free-identifier=? id #'else)) ids))
       (syntax-parser
@@ -156,8 +165,10 @@
        (match the-analyzer
          [(analyzer lv name proc)
           (cond
-            [(and (or (null? levels) (member lv levels))
-                  (or (null? names) (member name names)))
+            [(and (or (null? (current-levels))
+                      (member lv (current-levels)))
+                  (or (null? (current-analyzers))
+                      (member name (current-analyzers))))
              (for/list ([stx-fragment (in-list (proc stx))])
                (issue lv name stx-fragment))]
             [else '()])]
@@ -165,38 +176,51 @@
           ;; currently not supported
           '()])))))
 
-(define names '())
-(define levels '())
+(define (main path)
+  (for ([f (in-directory path)]
+        #:when (string-suffix? (~a f) ".rkt")
+        ;; This directory alone takes like 10+ mins. Let's skip it.
+        #:unless (string-contains? (~a f) "pkgs/racket-test/tests/racket/stress/")
+        ;; Not interested in trash
+        #:unless (string-contains? (~a f) "/.trash/"))
+    (define stx (get-syntax f))
+    (when stx
+      (define info (get-info stx))
+      (when info
+        (when (current-log-file)
+          (with-output-to-file (current-log-file) #:exists 'append
+            (λ () (printf "[~a] ~a\n" (date->string (current-date) #t) f))))
+        (define results (analyze info stx))
+        (unless (null? results)
+          (displayln "----------------------")
+          (printf "[~a] Processing ~a\n" (date->string (current-date) #t) f)
+          (for-each pretty-print results)
+          (newline))))))
 
-(define path
-  (command-line
-   #:multi
-   [("-a" "--analyze") name
-                       "Analyzer name (default: every analyzer)"
-                       (set! names (cons (string->symbol name) names))]
-   [("-l" "--level") level
-                     "Level (default: every level)"
-                     (set! levels (cons (string->symbol level) levels))]
-   #:args (path)
-   path))
+(define current-analyzers (make-parameter '()))
+(define current-levels (make-parameter '()))
+(define current-log-file (make-parameter #f))
 
-(for ([f (in-directory path)]
-      #:when (string-suffix? (~a f) ".rkt")
-      ;; This directory alone takes like 10+ mins. Let's skip it.
-      #:unless (string-contains? (~a f) "pkgs/racket-test/tests/racket/stress/")
-      ;; Not interested in trash
-      #:unless (string-contains? (~a f) "/.trash/"))
-  (define stx (get-syntax f))
-  (when stx
-    (define info (get-info stx))
-    (when info
-      (with-output-to-file "log.txt" #:exists 'append
-        (λ () (printf "[~a] ~a\n" (date->string (current-date) #t) f)))
-      (define results (analyze info stx))
-      (unless (null? results)
-        (with-output-to-file "result.txt" #:exists 'append
-          (λ ()
-            (displayln "----------------------")
-            (printf "[~a] Processing ~a\n" (date->string (current-date) #t) f)
-            (for-each pretty-print results)
-            (newline)))))))
+(module+ main
+  (define path
+    (command-line
+     #:multi
+     [("--analyze") name
+                    "Analyzer name (default: every analyzer)"
+                    (current-analyzers (cons (string->symbol name) (current-analyzers)))]
+     [("--level") level
+                  "Level (default: every level)"
+                  (current-levels (cons (string->symbol level) (current-levels)))]
+     #:once-each
+     [("--log-file") the-log-file
+                     "Logfile (default: none)"
+                     (current-log-file the-log-file)]
+     #:args (path)
+     path))
+
+  ;; make sure the file is created
+  (when (current-log-file)
+    (with-output-to-file (current-log-file) #:exists 'append
+      (λ () (display ""))))
+
+  (main path))

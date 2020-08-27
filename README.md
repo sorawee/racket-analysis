@@ -6,9 +6,7 @@ Run `racket main.rkt --help` for usage
 Example:
 
 ```
-racket main.rkt --level error ~/git/racket
+racket main.rkt --level error --level warning ~/git/racket 2> /dev/null
 ```
-
-This should generate `log.txt` and `result.txt`.
 
 See `result-racket.txt` and `result-racket-repos.txt` for (example) issues in Racket repos.
